@@ -1,0 +1,54 @@
+---
+title: 'Transfer the hourly data into monthly data '
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+This lab is preconfigured to include all dependencies (libraries, packages, and datasets) you'll need to complete your work in RStudio. You can practice, run test cases, and work on assignments from your browser.
+
+# Assignment Overview
+This assignment tests if you can conduct data integration for a time series data. In this lab, you are required to use the data provided, Crime3year.rds.
+
+#### The basic steps should be included in this lab: 
+1. Please create an R Markdown file, set the output format as html_document or html_document2. Finally knit the R Markdown file into the HTML file. 
+2. Please use the data provided to conduct a lab “Integrate time series data at hourly scale to monthly scale” based on the step mentioned below.   
+  Steps: 
+  - Install and load required packages. 
+  - Load and inspect the data 
+  - Select two years from the original data 
+  - Integrate the two-year time series data into monthly data. You can refer to the video "Time integration" about integrating data into weekly in Lesson 10.1.
+  - Save your monthly data into a file “Crime2years_monthly.rds”. 
+  - Please use kable() to create a table for the two years data. 
+  - Please have your true starting date and ending date in the caption. 
+  
+3. Please knit your R Markdown file into a HTML file and save it in the Module10 folder of this lab. 
+4. Please also save your Crime2years_monthly.rds. file in the Module10 folder of this lab. 
+5. When both files are present in Module10, Select the blue "Submit Assignment" button at the top of your lab.
+
+##### Important Reminder on Knit in this In-Browser RStudio option for this lab
+This lab is hosted in an iframe that facilitates lab management features but consequently will prevent Knitting to HTML or Preview Notebook working by default. However, you can still Knit your files in lab by taking the following steps:  
+- Step 1: Go to the "Help" icon in your lab toolbar (top right corner).  
+- Step 2: Select the "Switch Back to the Old Experience" hyperlink (right click select if you'd like to keep both the submit and knit windows open).  
+- Step 3: Knit your files to HTML or Preview Notebook.    
+You should now be able to load and preview them in your lab appropriately.   
+
+More details can be found in the RStudio Lab - In-Browser Option Reading :  
+https://www.coursera.org/learn/ball-state-university-data-visualization/supplement/E9jjS/rstudio-lab-in-browser-option
+
+### Grading Criteria
+This week, your code will be autograded on the following elements:  
+1. Your code should match the sequential operations required by the instructor.  
+2. Your code chunks should not be hidden.   
+3. You should select exactly two-year data.   
+4. You should integrate the data on an hourly scale into a monthly scale.   
+5. You should use kable() to create a table in the R Markdown file.  
+6. Your code should be run successfully.  
+7. You should provide comments for each step.   
+8. You should submit your file with the extensions of .html and .rds (the object of the two-year data at monthly scale) for autograding.
+
+### How to Submit Your Work for a Grade
+* **If you're working in the In-Browser RStudio:** When you've completed your lab, please be sure that your save your .html and .rds file in the **Module10** folder of this lab. From there use the "Submit Assignment" button in your lab's upper toolbar to submit your files for autograding. 
+* **If you completed your work in a local Desktop verison of RStudio:**  Upload your .rds and . html files to the Module10 folder of this lab, using the "Upload -> Choose File" button in your RStudio "Files" tab. Your target directory should be "~/Module10".
+
+For both options, you'll see a final grade and feedback for your work in the Programming Assignment item you launched this lab from. Once you've completed your submission and received a passing score, you can close this RStudio Lab.
