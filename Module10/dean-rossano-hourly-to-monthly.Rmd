@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 # load tidyverse
 library(tidyverse)
+library(kableExtra)
 ```
 
 ```{r}
@@ -27,4 +28,9 @@ bat_train_new <- bat_train %>%
 bat_train_monthly <- bat_train_new %>% 
   group_by(year, monthnum) %>% 
   summarize(case_monthly = sum(Battery))
+
+# save monthly data as RDS
+saveRDS(bat_train_monthly,"Crime2years_monthly.rds")
+# create kable of data
+kable(bat_train_monthly, caption = "Start date 9/1/2017, End Date 8/31/2019")
 ```
