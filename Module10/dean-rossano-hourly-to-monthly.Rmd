@@ -1,0 +1,30 @@
+---
+title: "dean-rossano-hourly-to-monthly"
+author: "Dean Rossano"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# load tidyverse
+library(tidyverse)
+```
+
+```{r}
+# read data from rds
+crime_bat <- readRDS("Crime3years.rds")
+
+# select 2 years
+bat_train <- head(crime_bat, 365 * 24 * 2)
+
+# create variables for month & year
+bat_train_new <- bat_train %>% 
+  mutate(month = month(bat_train$Date), year = year(bat_train$Date)) %>% 
+  mutate(monthnum = strftime(Date, format = "%m"))
+
+# group data by month
+bat_train_monthly <- bat_train_new %>% 
+  group_by(year, monthnum) %>% 
+  summarize(case_monthly = sum(Battery))
+```
